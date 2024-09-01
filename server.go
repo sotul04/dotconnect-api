@@ -6,6 +6,7 @@ import (
 	"dot-connect/solver"
 	"fmt"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/gin-contrib/cors"
@@ -25,7 +26,11 @@ type SolveResponse struct {
 
 func main() {
 
-	port := ":8080"
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "8000"
+	}
 
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
