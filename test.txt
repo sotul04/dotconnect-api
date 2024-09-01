@@ -1,0 +1,48 @@
+a := 2
+	// if a != 3 {
+	// 	matrix := [][]int{
+	// 		{1, 0, 0, 0, 0, 0, 1, 1},
+	// 		{0, 0, 0, 0, 0, 0, 0, 0},
+	// 		{0, 0, 0, 0, 0, 0, 0, 0},
+	// 		{0, 1, 1, 0, 0, 0, 1, 0},
+	// 		{0, 0, 0, 0, 0, 0, 0, 0},
+	// 		{1, 0, 0, 1, 0, 0, 1, 1},
+	// 		{0, 0, 0, 0, 0, 0, 2, 0},
+	// 		{0, 0, 0, 0, 1, 0, 1, 0},
+	// 		{1, 0, 1, 0, 1, 0, 0, 0},
+	// 		{0, 0, 1, 0, 0, 0, 0, 0},
+	// 		{0, 0, 0, 0, 0, 0, 0, 1},
+	// 		{0, 0, 1, 1, 0, 0, 0, 1},
+	// 	}
+	// 	board := board.NeWBoard(matrix, board.NewSize(12, 8), path.New(6, 6))
+	// 	solver := solver.New(board)
+	// 	start := time.Now()
+	// 	solver.Solve()
+	// 	elapsed := time.Since(start)
+	// 	if solver.Found {
+	// 		fmt.Println("Founded")
+	// 		solver.Solution.ShowPath()
+	// 		step := solver.Solution
+	// 		for step != nil {
+	// 			matrix[step.Row][step.Col] = step.Length
+	// 			step = step.Before()
+	// 		}
+	// 		for _, rows := range matrix {
+	// 			for _, cell := range rows {
+	// 				fmt.Printf("%d\t", cell)
+	// 			}
+	// 			fmt.Println()
+	// 		}
+	// 	} else {
+	// 		fmt.Println("Unfounded")
+	// 	}
+	// 	fmt.Println("Count Node", solver.CounterNode)
+	// 	fmt.Printf("Time elapsed: %s\n", elapsed)
+	// } else {
+	// 	path := path.New(2, 2)
+	// 	for i := 0; i < 10; i++ {
+	// 		path = path.ExtendPath(i, i+1)
+	// 	}
+	// 	path.ShowPath()
+	// 	fmt.Println(path.ToString())
+	// }
