@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -36,6 +37,14 @@ func myRoute(r *gin.RouterGroup) {
 
 func init() {
 	app = gin.New()
+	app.Use(cors.New(cors.Config{
+		AllowOrigins:     []string{"https://dot-connectsotul.vercel.app"},
+		AllowMethods:     []string{"GET", "POST"},
+		AllowHeaders:     []string{"Origin", "Content-Type", "Accept"},
+		ExposeHeaders:    []string{"Content-Length"},
+		AllowCredentials: true,
+		MaxAge:           12 * time.Hour,
+	}))
 	r := app.Group("")
 	myRoute(r)
 }
