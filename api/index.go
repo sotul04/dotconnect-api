@@ -10,14 +10,14 @@ var (
 )
 
 func myRoute(r *gin.RouterGroup) {
-	r.GET("/", func(c *gin.Context) {
+	r.GET("", func(c *gin.Context) {
 		c.String(http.StatusOK, "API ready to use!")
 	})
 }
 
 func init() {
 	app = gin.New()
-	r := app.Group("/")
+	r := app.Group("")
 	myRoute(r)
 }
 
