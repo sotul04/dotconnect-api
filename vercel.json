@@ -4,7 +4,7 @@
     [
         {
             "source":"/api(.*)",
-            "destination":"/server.go"
+            "destination":"/api/index.go"
         }
     ]
 }
