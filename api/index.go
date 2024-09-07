@@ -38,7 +38,7 @@ func myRoute(r *gin.RouterGroup) {
 func init() {
 	app = gin.New()
 	app.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"https://dot-connectsotul.vercel.app"},
+		AllowOrigins:     []string{"https://dot-connectsotul.vercel.app", "https://dot-connect-game.vercel.app"},
 		AllowMethods:     []string{"GET", "POST"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Accept"},
 		ExposeHeaders:    []string{"Content-Length"},
